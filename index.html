@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4511e">
+<title>SiteSupply — Construction delivery to your site</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="logo">⌂</span><span><b>SiteSupply</b><small data-en="Construction essentials, delivered" data-te="నిర్మాణ సామగ్రి మీ సైట్‌కే">Construction essentials, delivered</small></span></a>
+  <div class="top-actions">
+    <span class="location">📍 <span data-en="Deliver to" data-te="డెలివరీ చిరునామా">Deliver to</span> <b id="locationLabel">Khammam</b></span>
+    <select id="lang" aria-label="Language"><option value="en">English</option><option value="te">తెలుగు</option></select>
+    <button class="cart-top" id="cartJump">🛒 <span data-en="Cart" data-te="కార్ట్">Cart</span> <b id="cartCount">0</b></button>
+  </div>
+</header>
+<section class="auth-strip" aria-label="Account">
+ <div class="auth-copy"><strong id="authTitle">Welcome to SiteSupply</strong><span id="authMessage">Sign in to save your orders and track them across devices.</span></div>
+ <div class="auth-controls" id="authControls">
+  <input id="authEmail" type="email" autocomplete="email" placeholder="Email address" aria-label="Email address">
+  <input id="authPassword" type="password" autocomplete="current-password" placeholder="Password (min 8 characters)" aria-label="Password">
+  <button class="primary" id="signInBtn" type="button">Sign in</button>
+  <button class="secondary" id="signUpBtn" type="button">Create account</button>
+ </div>
+ <button class="secondary" id="signOutBtn" type="button" hidden>Sign out</button>
+ <button class="secondary" id="myOrdersBtn" type="button" hidden>My orders</button>
+</section>
+<main>
+<section class="hero">
+ <div><div class="pill">● <span data-en="KHAMMAM PILOT" data-te="ఖమ్మం పైలట్">KHAMMAM PILOT</span></div>
+ <h1 data-en="Construction materials. At your site. When you need them." data-te="నిర్మాణ సామగ్రి. మీ సైట్‌కే. మీకు అవసరమైనప్పుడు.">Construction materials. At your site. When you need them.</h1>
+ <p data-en="Order cement, sand, bricks, pipes and urgent hardware just like food delivery. Choose materials, sign in, enter your site address and place an order." data-te="ఫుడ్ డెలివరీలాగే సిమెంట్, ఇసుక, ఇటుకలు, పైపులు, హార్డ్‌వేర్ ఆర్డర్ చేయండి. వస్తువులు ఎంచుకుని సైట్ చిరునామా ఇచ్చి ఆర్డర్ చేయండి.">Order cement, sand, bricks, pipes and urgent hardware just like food delivery. Choose materials, sign in, enter your site address and place an order.</p>
+ <a class="primary" href="#products" data-en="Shop materials ↓" data-te="మెటీరియల్స్ చూడండి ↓">Shop materials ↓</a>
+ <div class="hero-points"><span>✓ <span data-en="Supplier confirmation" data-te="సప్లయర్ నిర్ధారణ">Supplier confirmation</span></span><span>✓ <span data-en="Delivery estimate" data-te="డెలివరీ అంచనా">Delivery estimate</span></span><span>✓ <span data-en="Site address checkout" data-te="సైట్ చిరునామా చెక్‌అవుట్">Site address checkout</span></span></div></div>
+ <div class="hero-art"><div class="art-card"><span>🧱</span><b data-en="Materials to your site" data-te="మీ సైట్‌కు మెటీరియల్స్">Materials to your site</b><small data-en="One order at a time" data-te="ప్రతి ఆర్డర్‌కు సమన్వయం">One order at a time</small></div><div class="art-badge">🚚 <span data-en="Site delivery" data-te="సైట్ డెలివరీ">Site delivery</span></div></div>
+</section>
+<div class="notice"><b data-en="Demo mode:" data-te="డెమో మోడ్:">Demo mode:</b> <span data-en="Live catalogue and orders are powered by Supabase once configured. Sample catalogue prices must be verified before launch." data-te="Supabase సెటప్ చేసిన తర్వాత క్యాటలాగ్, ఆర్డర్లు పనిచేస్తాయి. నమూనా ధరలను ప్రారంభానికి ముందు నిర్ధారించాలి.">Live catalogue and orders are powered by Supabase once configured. Sample catalogue prices must be verified before launch.</span></div>
+<section class="shop" id="products">
+ <div class="section-head"><div><span class="eyebrow" data-en="SHOP BY CATEGORY" data-te="వర్గం ద్వారా ఎంచుకోండి">SHOP BY CATEGORY</span><h2 data-en="What does your site need?" data-te="మీ సైట్‌కు ఏమి కావాలి?">What does your site need?</h2></div><input id="search" placeholder="Search cement, pipes..." aria-label="Search products"></div>
+ <div class="categories" id="categories">
+  <button class="cat active" data-cat="all">🛍️ <span data-en="All" data-te="అన్నీ">All</span></button>
+  <button class="cat" data-cat="cement">🧱 <span data-en="Foundation & Cement" data-te="ఫౌండేషన్ & సిమెంట్">Foundation & Cement</span></button>
+  <button class="cat" data-cat="steel">🏗️ <span data-en="Steel & Aggregate" data-te="స్టీల్ & కంకర">Steel & Aggregate</span></button>
+  <button class="cat" data-cat="bricks">🧱 <span data-en="Bricks & Blocks" data-te="ఇటుకలు & బ్లాక్స్">Bricks & Blocks</span></button>
+  <button class="cat" data-cat="plumbing">🚰 <span data-en="Plumbing" data-te="ప్లంబింగ్">Plumbing</span></button>
+  <button class="cat" data-cat="electrical">💡 <span data-en="Electrical" data-te="ఎలక్ట్రికల్">Electrical</span></button>
+  <button class="cat" data-cat="tiles">◻️ <span data-en="Tiles & Flooring" data-te="టైల్స్ & ఫ్లోరింగ్">Tiles & Flooring</span></button>
+  <button class="cat" data-cat="paint">🎨 <span data-en="Paint & Waterproofing" data-te="పెయింట్ & వాటర్‌ప్రూఫింగ్">Paint & Waterproofing</span></button>
+  <button class="cat" data-cat="doors">🚪 <span data-en="Doors & Windows" data-te="తలుపులు & కిటికీలు">Doors & Windows</span></button>
+  <button class="cat" data-cat="bathroom">🛁 <span data-en="Bathroom & Kitchen" data-te="బాత్‌రూమ్ & కిచెన్">Bathroom & Kitchen</span></button>
+  <button class="cat" data-cat="tools">🧰 <span data-en="Tools & Safety" data-te="పనిముట్లు & భద్రత">Tools & Safety</span></button>
+</div>
+ <div class="product-grid" id="productGrid"></div>
+</section>
+<section class="section" style="max-width:1192px;margin:auto;padding:10px 0 30px">
+ <div class="section-heading" style="text-align:left;margin:0 0 18px">
+  <span class="eyebrow" data-en="SHOP BY CONSTRUCTION STAGE" data-te="నిర్మాణ దశ ప్రకారం">SHOP BY CONSTRUCTION STAGE</span>
+  <h2 data-en="Plan materials stage by stage" data-te="నిర్మాణ దశల వారీగా మెటీరియల్స్ ప్లాన్ చేయండి">Plan materials stage by stage</h2>
+  <p data-en="Use this as a checklist; actual quantities should be confirmed by your engineer or contractor." data-te="ఇది చెక్‌లిస్ట్‌గా ఉపయోగించండి; అసలు పరిమాణాలను ఇంజనీర్ లేదా కాంట్రాక్టర్ నిర్ధారించాలి.">Use this as a checklist; actual quantities should be confirmed by your engineer or contractor.</p>
+ </div>
+ <div class="steps">
+  <article class="step"><h3 data-en="1. Foundation & structure" data-te="1. ఫౌండేషన్ & నిర్మాణం">1. Foundation & structure</h3><p data-en="Cement, TMT steel, sand, aggregate, binding wire, cover blocks and shuttering." data-te="సిమెంట్, TMT స్టీల్, ఇసుక, కంకర, బైండింగ్ వైర్, కవర్ బ్లాక్స్, షట్టరింగ్.">Cement, TMT steel, sand, aggregate, binding wire, cover blocks and shuttering.</p></article>
+  <article class="step"><h3 data-en="2. Brickwork & services" data-te="2. ఇటుక పని & సర్వీసులు">2. Brickwork & services</h3><p data-en="Bricks/blocks, cement, plastering sand, plumbing pipes and electrical conduits." data-te="ఇటుకలు/బ్లాక్స్, సిమెంట్, ప్లాస్టరింగ్ ఇసుక, ప్లంబింగ్ పైపులు, ఎలక్ట్రికల్ కండ్యూట్లు.">Bricks/blocks, cement, plastering sand, plumbing pipes and electrical conduits.</p></article>
+  <article class="step"><h3 data-en="3. Finishing" data-te="3. ఫినిషింగ్">3. Finishing</h3><p data-en="Tiles, adhesive, grout, doors, windows, putty, primer, paint, sanitaryware and lights." data-te="టైల్స్, అడ్హెసివ్, గ్రౌట్, తలుపులు, కిటికీలు, పుట్టీ, ప్రైమర్, పెయింట్, శానిటరీ సామగ్రి, లైట్లు.">Tiles, adhesive, grout, doors, windows, putty, primer, paint, sanitaryware and lights.</p></article>
+ </div>
+</section>
+<section class="checkout-area" id="checkout">
+ <div class="checkout-title"><span class="eyebrow" data-en="CHECKOUT" data-te="చెక్‌అవుట్">CHECKOUT</span><h2 data-en="Deliver to your construction site" data-te="మీ నిర్మాణ స్థలానికి డెలివరీ">Deliver to your construction site</h2><p data-en="Sign in, add materials, enter your site details and place a real order request." data-te="కార్ట్‌లో వస్తువులు జోడించి, సైట్ వివరాలు నమోదు చేసి ఆర్డర్ అభ్యర్థన పంపండి.">Sign in, add materials, enter your site details and place a real order request.</p></div>
+ <div class="checkout-grid">
+  <form id="checkoutForm" class="address-card">
+   <h3>📍 <span data-en="Site address" data-te="సైట్ చిరునామా">Site address</span></h3>
+   <label><span data-en="Full name" data-te="పూర్తి పేరు">Full name</span><input name="name" required placeholder="Your name / మీ పేరు"></label>
+   <label><span data-en="Mobile number" data-te="మొబైల్ నంబర్">Mobile number</span><input name="phone" required pattern="[0-9+\-\s]{10,16}" placeholder="10-digit phone number"></label>
+   <label><span data-en="Area / landmark" data-te="ప్రాంతం / గుర్తింపు స్థలం">Area / landmark</span><input name="area" required placeholder="e.g. Nizampet, Khammam"></label>
+   <label><span data-en="Full construction-site address" data-te="నిర్మాణ స్థలం పూర్తి చిరునామా">Full construction-site address</span><textarea name="address" required rows="3" placeholder="House/site number, street, area"></textarea></label>
+   <label><span data-en="Delivery preference" data-te="డెలివరీ ఎంపిక">Delivery preference</span><select name="delivery"><option value="standard" data-en="Standard — supplier confirms ETA" data-te="సాధారణం — సప్లయర్ సమయం నిర్ధారిస్తారు">Standard — supplier confirms ETA</option><option value="urgent" data-en="Urgent — request fastest available" data-te="అత్యవసరం — వీలైనంత త్వరగా">Urgent — request fastest available</option><option value="scheduled" data-en="Schedule for later" data-te="తర్వాతి సమయానికి">Schedule for later</option></select></label>
+   <label><span data-en="Payment preference" data-te="చెల్లింపు ఎంపిక">Payment preference</span><select name="payment"><option>Pay after supplier confirmation</option><option value="upi_after_confirmation">UPI after confirmation</option><option>Cash on delivery (subject to supplier approval)</option></select></label>
+   <button class="primary wide" type="submit" data-en="Place order request" data-te="ఆర్డర్ అభ్యర్థన పంపండి">Place order request</button>
+   <small class="muted" data-en="No online payment is collected in this version. Supplier must confirm price, stock and delivery." data-te="ఈ వెర్షన్‌లో ఆన్‌లైన్ చెల్లింపు లేదు. సప్లయర్ ధర, స్టాక్, డెలివరీ నిర్ధారించాలి.">No online payment is collected in this version. Supplier must confirm price, stock and delivery.</small>
+  </form>
+  <aside class="summary-card" id="cart">
+   <h3>🛒 <span data-en="Your cart" data-te="మీ కార్ట్">Your cart</span></h3>
+   <div id="cartItems"><p class="empty" data-en="Your cart is empty. Add materials above." data-te="మీ కార్ట్ ఖాళీగా ఉంది. పైన మెటీరియల్స్ జోడించండి.">Your cart is empty. Add materials above.</p></div>
+   <div class="summary-line"><span data-en="Items subtotal" data-te="వస్తువుల మొత్తం">Items subtotal</span><b id="subtotal">₹0</b></div>
+   <div class="summary-line"><span data-en="Estimated delivery" data-te="అంచనా డెలివరీ">Estimated delivery</span><b id="deliveryFee">₹0</b></div>
+   <div class="summary-line total"><span data-en="Estimated total" data-te="అంచనా మొత్తం">Estimated total</span><b id="total">₹0</b></div>
+   <p class="muted small" data-en="Final stock, material price, vehicle charge and ETA must be confirmed by the supplier before the real order is accepted." data-te="నిజమైన ఆర్డర్ అంగీకరించే ముందు స్టాక్, మెటీరియల్ ధర, వాహన ఛార్జీ, డెలివరీ సమయం సప్లయర్ నిర్ధారించాలి.">Final stock, material price, vehicle charge and ETA must be confirmed by the supplier before the real order is accepted.</p>
+  </aside>
+ </div>
+ <div class="tracking" id="tracking" hidden><div><span class="eyebrow" data-en="ORDER REQUEST CREATED" data-te="ఆర్డర్ అభ్యర్థన సృష్టించబడింది">ORDER REQUEST CREATED</span><h2 data-en="Your order journey" data-te="మీ ఆర్డర్ ప్రయాణం">Your order journey</h2><p id="orderNumber"></p></div><div class="track-steps"><div class="track-step done">✓<small data-en="Order placed" data-te="ఆర్డర్ నమోదు">Order placed</small></div><div class="track-step">2<small data-en="Supplier confirms" data-te="సప్లయర్ నిర్ధారణ">Supplier confirms</small></div><div class="track-step">3<small data-en="Preparing" data-te="సిద్ధం చేస్తున్నారు">Preparing</small></div><div class="track-step">4<small data-en="Out for delivery" data-te="డెలివరీకి బయలుదేరింది">Out for delivery</small></div><div class="track-step">5<small data-en="Delivered" data-te="డెలివరీ పూర్తయింది">Delivered</small></div></div><p class="muted" data-en="Order status updates come from the database. Supplier and driver automation is not included yet." data-te="ఆర్డర్ స్థితి డేటాబేస్ నుంచి వస్తుంది. సప్లయర్, డ్రైవర్ ఆటోమేషన్ ఇంకా లేదు.">Order status updates come from the database. Supplier and driver automation is not included yet.</p></div>
+</section>
+<section class="orders-panel" id="myOrdersPanel" hidden><div class="section-head"><div><span class="eyebrow">ACCOUNT</span><h2>My orders</h2></div><button class="secondary" id="refreshOrdersBtn" type="button">Refresh</button></div><div id="ordersList"></div></section>
+<section class="supplier-band"><div><span class="eyebrow" data-en="LOCAL SUPPLIERS & DELIVERY PARTNERS" data-te="స్థానిక సప్లయర్లు & డెలివరీ భాగస్వాములు">LOCAL SUPPLIERS & DELIVERY PARTNERS</span><h2 data-en="Own a hardware shop or delivery vehicle?" data-te="మీకు హార్డ్‌వేర్ షాప్ లేదా డెలివరీ వాహనం ఉందా?">Own a hardware shop or delivery vehicle?</h2><p data-en="Join the pilot and help deliver materials to construction sites around Khammam." data-te="పైలట్‌లో చేరి ఖమ్మం పరిసర నిర్మాణ స్థలాలకు సామాగ్రి అందించండి.">Join the pilot and help deliver materials to construction sites around Khammam.</p></div><a class="secondary" href="#checkout" data-en="Become a partner" data-te="భాగస్వామి అవ్వండి">Become a partner</a></section>
+</main>
+<footer><b>SiteSupply</b><span data-en="Prototype for Khammam · Telugu + English" data-te="ఖమ్మం కోసం నమూనా · తెలుగు + ఇంగ్లీష్">Prototype for Khammam · Telugu + English</span><span>© <span id="year"></span> SiteSupply</span></footer>
+<script type="module" src="app.js"></script>
+</body></html>
